@@ -35,7 +35,15 @@ public class HibernateSessionJunitTest {
 	
 	@Test
 	public void test(){
-		
+		User user = new User();
+		user.setName("Jack");
+		user.setAge(10);
+		//session.save(user);
+		User user2 = (User) session.get(User.class, 1);
+		System.out.println(user2.toString());
+		User user3 = (User) session.get(User.class, 1);
+		System.out.println(user3.toString());
+		user2.setName("Tom");
 	}
 	
 	@After
