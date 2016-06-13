@@ -27,6 +27,9 @@
     	<!-- 数据库表生成策略 -->
     	<property name="hbm2ddl.auto">update</property>
     	
+    	<!-- 设置hibernate事务的隔离级别为读提交 -->
+    	<property name="hibernate.connection.isolation">2</property>
+    	
     	<!-- 指定关联的hbm.xml文件,resource表示的是目录结构 -->
     	<mapping resource="com/zq/User.hbm.xml" />
     </session-factory>
